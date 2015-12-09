@@ -1,0 +1,7 @@
+INFILE=/home/kmilo/Documents/Final/build/system-routed.ncd
+OUTFILE=/home/kmilo/Documents/Final/build/system.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=/home/kmilo/Documents/Final/build
+LICENSE=WebPack
+USER_INFO=211047879_0_0_472

@@ -524,25 +524,33 @@ nsleep(20000);
 	switch (c) {
     		case 0x01:
 			
-			for (N=0; N<200; N++){	
+			for (N=0; N<1; N++){	
 					  result = sen [N];
 				  for(unos=0; unos<result; unos++){
 						gpio0->out = 0x01;
-						msleep (1);
+						nsleep (100);
 					}
-				for(ceros=result; ceros<100; ceros++){
+				for(ceros=result; ceros<300; ceros++){
 					gpio0->out = 0x00;
-					msleep (1);
+					nsleep (100);
 					}
 		  
 	}
 
     			break;
 		case 0x02:
-			gpio0->out = 0x01;
-			msleep(1);
-			gpio0->out = 0x00;
-			msleep(1);
+			for (N=0; N<1; N++){	
+					  result = sen [N];
+				  for(unos=0; unos<result; unos++){
+						gpio0->out = 0x01;
+						nsleep (1000);
+					}
+				for(ceros=result; ceros<300; ceros++){
+					gpio0->out = 0x00;
+					nsleep (1000);
+					}
+		  
+	}
     			break;
 		case 0x04:
 			gpio0->in;

@@ -1,79 +1,30 @@
-Release 14.7 Map P.20131013 (lin64)
-Xilinx Map Application Log File for Design 'system'
+Release 14.7 par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Design Information
-------------------
-Command Line   : map system.ngd 
-Target Device  : xc7a100t
-Target Package : csg324
-Target Speed   : -3
-Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Wed Dec  9 12:35:50 2015
+kmilo::  Wed Dec 09 12:36:54 2015
 
-Mapping design into LUTs...
-Writing file system.ngm...
-Running directed packing...
-Running delay-based LUT packing...
-Updating timing models...
-INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
-   (.mrp).
-Running timing-driven placement...
-Total REAL time at the beginning of Placer: 27 secs 
-Total CPU  time at the beginning of Placer: 26 secs 
+par -ol high -w system.ncd system-routed.ncd 
 
-Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:dfb8cf8b) REAL time: 29 secs 
 
-Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:dfb8cf8b) REAL time: 29 secs 
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '7a100t.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+   "system" is an NCD, version 3.2, device xc7a100t, package csg324, speed -3
 
-Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:dfb8cf8b) REAL time: 29 secs 
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
 
-Phase 4.2  Initial Placement for Architecture Specific Features
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
 
-Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:6b56683a) REAL time: 34 secs 
+Device speed data version:  "PRODUCTION 1.10 2013-10-13".
 
-Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:6b56683a) REAL time: 34 secs 
 
-Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:6b56683a) REAL time: 34 secs 
 
-Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:6b56683a) REAL time: 34 secs 
+Device Utilization Summary:
 
-Phase 8.8  Global Placement
-......................................
-...........................................
-............................
-...............................................
-Phase 8.8  Global Placement (Checksum:11b197b7) REAL time: 51 secs 
-
-Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:11b197b7) REAL time: 51 secs 
-
-Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:767ceced) REAL time: 56 secs 
-
-Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:767ceced) REAL time: 56 secs 
-
-Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:767ceced) REAL time: 56 secs 
-
-Total REAL time to Placer completion: 59 secs 
-Total CPU  time to Placer completion: 58 secs 
-Running post-placement packing...
-Writing output files...
-
-Design Summary
---------------
-
-Design Summary:
-Number of errors:      0
-Number of warnings:    0
 Slice Logic Utilization:
   Number of Slice Registers:                 1,178 out of 126,800    1%
     Number used as Flip Flops:               1,177
@@ -104,9 +55,8 @@ Slice Logic Distribution:
     Number with an unused Flip Flop:           693 out of   1,784   38%
     Number with an unused LUT:                 405 out of   1,784   22%
     Number of fully used LUT-FF pairs:         686 out of   1,784   38%
-    Number of unique control sets:              39
     Number of slice register sites lost
-      to control set restrictions:              63 out of 126,800    1%
+      to control set restrictions:               0 out of 126,800    0%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -162,11 +112,87 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.87
 
-Peak Memory Usage:  1267 MB
-Total REAL time to MAP completion:  1 mins 1 secs 
-Total CPU time to MAP completion:   1 mins 1 secs 
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
 
-Mapping completed.
-See MAP report file "system.mrp" for details.
+Starting initial Timing Analysis.  REAL time: 17 secs 
+Finished initial Timing Analysis.  REAL time: 17 secs 
+
+Starting Router
+
+
+Phase  1  : 9350 unrouted;      REAL time: 18 secs 
+
+Phase  2  : 8056 unrouted;      REAL time: 19 secs 
+
+Phase  3  : 2962 unrouted;      REAL time: 22 secs 
+
+Phase  4  : 2962 unrouted; (Par is working to improve performance)     REAL time: 25 secs 
+
+Updating file: system-routed.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 29 secs 
+Total REAL time to Router completion: 29 secs 
+Total CPU time to Router completion: 30 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.093ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.001ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 30 secs 
+Total CPU time to PAR completion: 31 secs 
+
+Peak Memory Usage:  1075 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 2
+
+Writing design to file system-routed.ncd
+
+
+
+PAR done!
