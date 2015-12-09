@@ -1,0 +1,44 @@
+
+# ==== Cloclk inputs (CLK) ====
+
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";
+NET "clk" TNM_NET = sys_clk;
+TIMESPEC TS_sys_clk = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+
+NET "rst"	LOC = "C12"	| IOSTANDARD = "LVCMOS33";
+NET "led"	LOC = "P5"	| IOSTANDARD = "LVCMOS33";
+
+
+# ==== UART ====
+NET "uart_txd"	LOC = "D4"	| IOSTANDARD = "LVCMOS33";		
+NET "uart_rxd"	LOC = "C4"	| IOSTANDARD = "LVCMOS33";		
+
+# ==== SPI ====
+NET "spi_miso"	LOC = "P2"	| IOSTANDARD = "LVCMOS33";		
+NET "spi_mosi"	LOC = "R2"	| IOSTANDARD = "LVCMOS33";		
+NET "spi_clk"	LOC = "U1"	| IOSTANDARD = "LVCMOS33";		
+
+# ==== I2C ====
+#NET "i2c_sda"	LOC = "V9"	| IOSTANDARD = "LVCMOS33";		
+#NET "i2c_clk"	LOC = "T1"	| IOSTANDARD = "LVCMOS33";		
+
+
+## LEDs GPIO
+NET "sal<0>"			LOC = "T8"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = [
+NET "sal<1>"			LOC = "V9"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = 
+NET "sal<2>"			LOC = "R8"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = 
+NET "sal<3>"			LOC = "T6"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = 
+#NET "sal<4>"			LOC = "T5"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = 
+#NET "sal<5>"			LOC = "T4"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = 
+#NET "sal<6>"			LOC = "U7"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = 
+#NET "sal<7>"			LOC = "U6"	| IOSTANDARD = "LVCMOS33";		#Bank = 34, Pin name = 
+
+
+NET "boton"			LOC = "V10"	| IOSTANDARD = "LVCMOS33";
+NET "boton1"			LOC = "R10"	| IOSTANDARD = "LVCMOS33";
+NET "boton2"			LOC = "T16"	| IOSTANDARD = "LVCMOS33";
+NET "boton3"			LOC = "F15"	| IOSTANDARD = "LVCMOS33";
+
+## PWM Audio Amplifier
+#NET "sal<0>"			LOC = "A11"	| IOSTANDARD = "LVCMOS33";		#Bank = 15, Pin name = 
+
